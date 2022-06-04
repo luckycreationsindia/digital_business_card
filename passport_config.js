@@ -5,7 +5,7 @@ const saltRounds = 10;
 
 module.exports = function (passport) {
     passport.serializeUser(function (user, done) {
-        done(null, user.id);
+        done(null, user._id);
     });
 
     passport.deserializeUser(function (id, done) {
@@ -91,8 +91,7 @@ module.exports = function (passport) {
                     if (!bcrypt.compareSync(password, user.password)) {
                         return done(null, false, {
                             status: 'Error',
-                            message: 'Max Failed Attempt Reached. Please wait for 15mins and try again.',
-                            error: err.message
+                            message: 'Invalid username/password'
                         });
                     } else {
                         req.session.username = user.email;

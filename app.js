@@ -14,6 +14,8 @@ global.dbConfig = {
     DB: process.env.DB_NAME,
 }
 
+global.print = console.log;
+
 require('./mongo_connector')();
 const sessionStore = new MongoDBStore({
     uri: `mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`,
@@ -59,10 +61,20 @@ app.use(sess);
 app.use(passport.initialize());
 app.use(passport.session());
 
+global.isAdmin = (req, res, next) => {
+    if (req.isAuthenticated && req.user && req.user.role === 1) {
+        next();
+    } else {
+        res.status(403).json({'status': 'error', 'message': 'Unauthorized Access'});
+    }
+}
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const customersRouter = require('./routes/customer');
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/v1/', usersRouter);
+app.use('/api/v1/c', customersRouter);
 
 module.exports = app;

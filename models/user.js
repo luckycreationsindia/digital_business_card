@@ -34,14 +34,13 @@ const UserSchema = new Schema({
         type: Number,
         default: 0
     },
-    totp_secret: String,
-}, {timestamps: true, collection: 'users'});
+}, {timestamps: true, collection: 'users', toJSON: {virtuals: true}, toObject: {virtuals: true}});
 
-UserSchema.virtual('id').get(function () {
-    return this._id.toHexString();
+UserSchema.virtual('id').get(function() {
+    return this._id.toString();
 });
 
-UserSchema.virtual('display_name').get(function () {
+UserSchema.virtual('display_name').get(function() {
     return getDisplayName(this);
 });
 
