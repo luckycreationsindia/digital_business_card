@@ -9,6 +9,6 @@ router.get('/:id', Controller.loadById);
 router.post('/add', isAdmin, Controller.add);
 
 /* Update Customer */
-router.post('/update', isAdmin, Controller.update);
+router.post('/update/:id', isAdmin, Controller.update);
 
 module.exports = router;
