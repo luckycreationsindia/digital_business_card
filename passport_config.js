@@ -9,18 +9,19 @@ module.exports = function (passport) {
     });
 
     passport.deserializeUser(function (id, done) {
-        User.find({_id: id}, {password: 0}, (err, rows) => {
-            if (err) return done(null, false, {
+        User.find({_id: id}, {password: 0}).then((rows) => {
+            try {
+                let user = rows[0];
+                done(null, user);
+            } catch (err) {
+                done(null, false, {status: 'Error', message: 'Error connecting to database'});
+            }
+        }).catch((err) => {
+            return done(null, false, {
                 status: 'Error',
                 message: 'Error connecting to database',
                 error: err.message
             });
-            try {
-                let user = rows[0];
-                done(err, user);
-            } catch (err) {
-                done(null, false, {status: 'Error', message: 'Error connecting to database'});
-            }
         });
     });
 
@@ -69,14 +70,7 @@ module.exports = function (passport) {
         verifyUser));
 
     function verifyUser(req, email, password, done) {
-        User.find({email: email}, (err, rows) => {
-            if (err) {
-                return done(null, false, {
-                    status: 'Error',
-                    message: 'Error connecting to database',
-                    error: err.message
-                });
-            }
+        User.find({email: email}).then((rows) => {
             try {
                 if (!rows.length) {
                     return done(null, false, {status: 'Error', message: 'Invalid username/password'});
@@ -101,6 +95,12 @@ module.exports = function (passport) {
             } catch (err) {
                 done(null, false, {status: 'Error', message: 'Error connecting to database'});
             }
+        }).catch((err) => {
+            return done(null, false, {
+                status: 'Error',
+                message: 'Error connecting to database',
+                error: err.message
+            });
         });
     }
 

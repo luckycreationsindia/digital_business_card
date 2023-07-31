@@ -29,13 +29,9 @@ let load = (data, next) => {
     let filters = data.filter || {};
     let projection = data.projection || {};
     let options = data.options || {};
-    Model.find(filters, projection, options, (err, result) => {
-        if (err) {
-            next(err);
-        } else {
-            next(null, result);
-        }
-    });
+    Model.find(filters, projection, options).then((result) => {
+        next(null, result);
+    }).catch(next);
 }
 
 let remove = (id, next) => {
