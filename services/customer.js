@@ -16,7 +16,7 @@ let add = (data, next) => {
 }
 
 let update = (data, next) => {
-    Model.findByIdAndUpdate(data._id, data, {new: true}, function (err, result) {
+    Model.findByIdAndUpdate(data._id, data, {new: true}, (err, result) => {
         if (err) {
             return next(err);
         } else {

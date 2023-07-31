@@ -1,7 +1,7 @@
 const passport = require("passport");
 
 exports.signup = async (req, res, next) => {
-    passport.authenticate('local-signup', function (err, user, info) {
+    passport.authenticate('local-signup', (err, user, info) => {
         if (err) {
             return next(err);
         }
@@ -12,7 +12,7 @@ exports.signup = async (req, res, next) => {
 };
 
 exports.signin = (req, res, next) => {
-    passport.authenticate('local-login', function (err, user, info) {
+    passport.authenticate('local-login', (err, user, info) => {
         if (err) {
             return next(err);
         }
@@ -20,7 +20,7 @@ exports.signin = (req, res, next) => {
             return res.json(info);
         }
         // req / res held in closure
-        req.logIn(user, function (err) {
+        req.logIn(user, (err) => {
             if (err) {
                 return next(err);
             }
