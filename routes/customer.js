@@ -5,6 +5,9 @@ const Controller = require('../controllers/customer');
 /* Load by ID. */
 router.get('/:id', Controller.loadById);
 
+/* Load All. */
+router.post('/loadAll', isAdmin, Controller.loadAll);
+
 /* Add New Customer */
 router.post('/add', isAdmin, Controller.add);
 
