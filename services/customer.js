@@ -3,26 +3,20 @@ let Model = require('../models/customer');
 let add = (data, next) => {
     let model = new Model(data);
 
-    model.save((err, result) => {
-        if (err) {
-            if (err.code === 11000) {
-                return next(new Error("Already Exist"));
-            }
-            next(err);
-        } else {
-            return next(null, result);
+    model.save().then((result) => {
+        return next(null, result);
+    }).catch((err) => {
+        if (err.code === 11000) {
+            return next(new Error("Already Exist"));
         }
+        next(err);
     });
 }
 
 let update = (data, next) => {
-    Model.findByIdAndUpdate(data._id, data, {new: true}, (err, result) => {
-        if (err) {
-            return next(err);
-        } else {
-            return next(null, result);
-        }
-    });
+    Model.findByIdAndUpdate(data._id, data, {new: true}).then((result) => {
+        return next(null, result);
+    }).catch(next);
 }
 
 let load = (data, next) => {
