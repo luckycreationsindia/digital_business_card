@@ -58,7 +58,7 @@ let sess = session({
     proxy: true,
     cookie: {
         secure: false,
-        sameSite: 'none',
+        sameSite: 'lax',
         maxAge: new Date().getTime() + (60 * 60 * 24 * 1000 * 7)
     },
 });
