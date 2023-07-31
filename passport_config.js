@@ -53,13 +53,9 @@ module.exports = function (passport) {
                 status: false
             });
 
-            user.save(function (err, user) {
-                if (err) {
-                    return done(err);
-                } else {
-                    return done(null, false, {status: 'Success', message: 'Registration Successful'});
-                }
-            });
+            user.save().then((user) => {
+                return done(null, false, {status: 'Success', message: 'Registration Successful'});
+            }).catch(done);
         }));
 
     passport.use('local-login', new LocalStrategy({
