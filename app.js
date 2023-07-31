@@ -55,7 +55,12 @@ let sess = session({
     store: sessionStore,
     name: 'dbc-token',
     touchAfter: 24 * 3600, resave: true, saveUninitialized: true, autoRemove: 'native',
-    cookie: {secure: false, maxAge: new Date().getTime() + (60 * 60 * 24 * 1000 * 7)},
+    proxy: true,
+    cookie: {
+        secure: false,
+        sameSite: 'none',
+        maxAge: new Date().getTime() + (60 * 60 * 24 * 1000 * 7)
+    },
 });
 app.use(sess);
 app.use(passport.initialize());
