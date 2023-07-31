@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="*Cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/customer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/customer.js" afterDir="false" />
-    </list>
+    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="*Add loadAll customers for admin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690820029146</updated>
-      <workItem from="1690820030340" duration="3102000" />
+      <workItem from="1690820030340" duration="3404000" />
     </task>
     <task id="LOCAL-00001" summary="*Update packages">
       <option name="closed" value="true" />
@@ -81,7 +77,23 @@
       <option name="project" value="LOCAL" />
       <updated>1690820468643</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="*Change sameSite none">
+      <option name="closed" value="true" />
+      <created>1690837263390</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690837263390</updated>
+    </task>
+    <task id="LOCAL-00004" summary="*Add loadAll customers for admin">
+      <option name="closed" value="true" />
+      <created>1690837313226</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690837313226</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,7 +104,9 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="*Update packages" />
     <MESSAGE value="*Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="*Cleanup" />
+    <MESSAGE value="*Change sameSite none" />
+    <MESSAGE value="*Add loadAll customers for admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="*Add loadAll customers for admin" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>

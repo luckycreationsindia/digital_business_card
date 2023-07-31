@@ -1,0 +1,5 @@
+AUTH_SECRET=S-K3y
+DB_HOST=0.0.0.0
+DB_PORT=27017
+DB_NAME=digital_business_card
+PORT=9876
