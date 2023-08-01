@@ -24,7 +24,7 @@ const uploadFile = (filePath, ext, next) => {
         };
         s3.upload(params, function (s3Err, data) {
             if (s3Err) return next(s3Err);
-            next(null, data.Key);
+            next(null, process.env.AWS_S3_ROOT_PATH + data.Key);
         });
     });
 };
