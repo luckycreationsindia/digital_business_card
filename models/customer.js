@@ -32,10 +32,6 @@ const CustomerSchema = new Schema({
     status: {type: Boolean, default: false},
 }, {timestamps: true, collection: 'customers', toJSON: {virtuals: true}, toObject: {virtuals: true}});
 
-CustomerSchema.virtual('id').get(function() {
-    return this._id.toHexString();
-});
-
 CustomerSchema.virtual('displayName').get(function() {
     return getDisplayName(this);
 });
