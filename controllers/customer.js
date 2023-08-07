@@ -22,6 +22,18 @@ let update = (req, res, next) => {
     });
 }
 
+let getLink = (req, res, next) => {
+    let data = req.body;
+    data._id = req.params.id;
+    Service.getLink(req.body, (err, result) => {
+        if (err) {
+            return next(err);
+        } else {
+            res.json({'status': 'Success', 'message': result});
+        }
+    });
+}
+
 let loadById = (req, res, next) => {
     Service.load({filter: {_id: req.params.id}}, (err, result) => {
         if (err) {
@@ -44,6 +56,7 @@ let loadAll = (req, res, next) => {
 module.exports = {
     add,
     update,
+    getLink,
     loadById,
     loadAll
 }

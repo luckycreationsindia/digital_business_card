@@ -14,4 +14,7 @@ router.post('/add', isAdmin, Controller.add);
 /* Update Customer */
 router.post('/update/:id', isAdmin, Controller.update);
 
+/* Update Customer */
+router.post('/getLink/:id', isAdmin, Controller.getLink);
+
 module.exports = router;

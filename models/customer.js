@@ -29,6 +29,7 @@ const CustomerSchema = new Schema({
     bankDetails: String,
     about: String,
     notes: String,
+    dynamic_link: {type: String, maxLength: 300},
     status: {type: Boolean, default: false},
 }, {timestamps: true, collection: 'customers', toJSON: {virtuals: true}, toObject: {virtuals: true}});
 

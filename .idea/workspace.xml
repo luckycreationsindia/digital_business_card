@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="*Add loadAll customers for admin" />
+    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="*Add install.sh to load from GitHub">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-env.sample" beforeDir="false" afterPath="$PROJECT_DIR$/custom-env.sample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/customer.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,35 +31,57 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+        &quot;associatedIndex&quot;: 6
+        }</component>
   <component name="ProjectId" id="2TLQl2xsMJVptQBTjS0GSIpK7uv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "go.import.settings.migrated": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.3.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.3.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lucky/Projects/NodeJS/digital_business_card/.idea&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,7 +90,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690820029146</updated>
-      <workItem from="1690820030340" duration="3404000" />
+      <workItem from="1690820030340" duration="8381000" />
+      <workItem from="1690850829310" duration="942000" />
+      <workItem from="1690854345430" duration="5060000" />
+      <workItem from="1690980514486" duration="3610000" />
+      <workItem from="1691031430242" duration="785000" />
+      <workItem from="1691104960388" duration="98000" />
+      <workItem from="1691382138719" duration="3620000" />
     </task>
     <task id="LOCAL-00001" summary="*Update packages">
       <option name="closed" value="true" />
@@ -93,11 +130,94 @@
       <option name="project" value="LOCAL" />
       <updated>1690837313226</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="*Add sample env file">
+      <option name="closed" value="true" />
+      <created>1690837469858</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690837469858</updated>
+    </task>
+    <task id="LOCAL-00006" summary="*Change mongoose find to promise">
+      <option name="closed" value="true" />
+      <created>1690838091743</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690838091743</updated>
+    </task>
+    <task id="LOCAL-00007" summary="*Change sameSite to lax">
+      <option name="closed" value="true" />
+      <created>1690838295015</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690838295015</updated>
+    </task>
+    <task id="LOCAL-00008" summary="*Change mongoose find to promise">
+      <option name="closed" value="true" />
+      <created>1690840434802</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1690840434802</updated>
+    </task>
+    <task id="LOCAL-00009" summary="*Change mongoose find to promise">
+      <option name="closed" value="true" />
+      <created>1690840437497</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690840437497</updated>
+    </task>
+    <task id="LOCAL-00010" summary="*Remove redundant virtual">
+      <option name="closed" value="true" />
+      <created>1690850893900</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690850893900</updated>
+    </task>
+    <task id="LOCAL-00011" summary="*Add File Upload API">
+      <option name="closed" value="true" />
+      <created>1690863045258</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690863045258</updated>
+    </task>
+    <task id="LOCAL-00012" summary="*Add S3 Root Path">
+      <option name="closed" value="true" />
+      <created>1690863403066</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690863403066</updated>
+    </task>
+    <task id="LOCAL-00013" summary="*Add install.sh to load from GitHub">
+      <option name="closed" value="true" />
+      <created>1691105041083</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1691105041083</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -106,7 +226,14 @@
     <MESSAGE value="*Cleanup" />
     <MESSAGE value="*Change sameSite none" />
     <MESSAGE value="*Add loadAll customers for admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="*Add loadAll customers for admin" />
+    <MESSAGE value="*Add sample env file" />
+    <MESSAGE value="*Change sameSite to lax" />
+    <MESSAGE value="*Change mongoose find to promise" />
+    <MESSAGE value="*Remove redundant virtual" />
+    <MESSAGE value="*Add File Upload API" />
+    <MESSAGE value="*Add S3 Root Path" />
+    <MESSAGE value="*Add install.sh to load from GitHub" />
+    <option name="LAST_COMMIT_MESSAGE" value="*Add install.sh to load from GitHub" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
