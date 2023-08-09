@@ -49,13 +49,27 @@ let loadAll = (data, next) => {
 }
 
 let load = (data, next) => {
+    console.log(data)
+    const limit = data['limit'] ? parseInt(data['limit']) : 10;
+    let page = data['page'] ? parseInt(data['page']) : 1;
+    if (page < 1) {
+        page = 1
+    }
+    const skip = (page - 1) * limit;
+
     let filters = data.filter || {};
     let projection = data.projection || {};
     let options = data.options || {};
     filters.status = true;
     filters.private = false;
-    Model.find(filters, projection, options).then((result) => {
-        next(null, result);
+    let m =  Model.find(filters, projection, options);
+    m = m.skip(skip).limit(limit)
+
+    m.lean().then((result) => {
+        Model.countDocuments(filters).then((c) => {
+            result.totalCount = c;
+            next(null, result);
+        }).catch(next);
     }).catch(next);
 }
 

@@ -8,7 +8,7 @@ router.get('/:id', Controller.loadById);
 /* Load All. */
 router.post('/loadAll', isAdmin, Controller.loadAll);
 
-/* Load All. */
+/* Load For Connect. */
 router.post('/load', Controller.load);
 
 /* Add New Customer */

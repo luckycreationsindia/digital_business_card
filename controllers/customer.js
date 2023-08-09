@@ -47,14 +47,16 @@ let loadById = (req, res, next) => {
 }
 
 let loadAll = (req, res, next) => {
-    Service.loadAll({}, (err, result) => {
+    let data = req.body;
+    Service.loadAll(data, (err, result) => {
         if (err) return next(err);
         res.json({'status': 'Success', 'message': result});
     });
 }
 
 let load = (req, res, next) => {
-    Service.load({}, (err, result) => {
+    let data = req.body;
+    Service.load(data, (err, result) => {
         if (err) return next(err);
         res.json({'status': 'Success', 'message': result});
     });
