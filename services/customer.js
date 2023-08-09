@@ -49,7 +49,6 @@ let loadAll = (data, next) => {
 }
 
 let load = (data, next) => {
-    console.log(data)
     const limit = data['limit'] ? parseInt(data['limit']) : 10;
     let page = data['page'] ? parseInt(data['page']) : 1;
     if (page < 1) {
