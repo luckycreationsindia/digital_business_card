@@ -31,7 +31,8 @@ const CustomerSchema = new Schema({
     about: String,
     notes: String,
     dynamic_link: {type: String, maxLength: 300},
-    status: {type: Boolean, default: false},
+    private: {type: Boolean, default: false},
+    status: {type: Boolean, default: true},
 }, {timestamps: true, collection: 'customers', toJSON: {virtuals: true}, toObject: {virtuals: true}});
 
 CustomerSchema.virtual('displayName').get(function() {
