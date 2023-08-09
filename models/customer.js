@@ -12,6 +12,7 @@ const CustomerSchema = new Schema({
     email: String,
     website: String,
     address: String,
+    gst: String,
     city: {type: String, default: "Bangalore"},
     state: {type: String, default: "Karnataka"},
     country: {type: String, default: "India"},
