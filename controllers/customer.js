@@ -47,6 +47,13 @@ let loadById = (req, res, next) => {
 }
 
 let loadAll = (req, res, next) => {
+    Service.loadAll({}, (err, result) => {
+        if (err) return next(err);
+        res.json({'status': 'Success', 'message': result});
+    });
+}
+
+let load = (req, res, next) => {
     Service.load({}, (err, result) => {
         if (err) return next(err);
         res.json({'status': 'Success', 'message': result});
@@ -58,5 +65,6 @@ module.exports = {
     update,
     getLink,
     loadById,
-    loadAll
+    load,
+    loadAll,
 }

@@ -39,10 +39,21 @@ let getLink = (data, next) => {
     }).catch(next);
 }
 
+let loadAll = (data, next) => {
+    let filters = data.filter || {};
+    let projection = data.projection || {};
+    let options = data.options || {};
+    Model.find(filters, projection, options).then((result) => {
+        next(null, result);
+    }).catch(next);
+}
+
 let load = (data, next) => {
     let filters = data.filter || {};
     let projection = data.projection || {};
     let options = data.options || {};
+    filters.status = true;
+    filters.private = false;
     Model.find(filters, projection, options).then((result) => {
         next(null, result);
     }).catch(next);
@@ -62,6 +73,7 @@ module.exports = {
     add,
     update,
     getLink,
+    loadAll,
     load,
     remove
 }
