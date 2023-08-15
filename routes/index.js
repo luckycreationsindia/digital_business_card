@@ -62,6 +62,7 @@ router.get('/api/v1/sectors/', function(req, res, next) {
     "Glass, Ceramics & Concrete",
     "Government Administration",
     "Government Relations",
+    "Granites & Tools",
     "Graphic Design",
     "Health, Wellness & Fitness",
     "Higher Education",
