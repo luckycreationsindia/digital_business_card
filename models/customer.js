@@ -30,7 +30,9 @@ const CustomerSchema = new Schema({
     bankDetails: String,
     about: String,
     notes: String,
-    dynamic_link: {type: String, maxLength: 300},
+    short_path: {type: String, maxLength: 30, unique: true},
+    sectors: [{type: String, maxLength: 150}],
+    tags: [{type: String, maxLength: 100}],
     private: {type: Boolean, default: false},
     status: {type: Boolean, default: true},
 }, {timestamps: true, collection: 'customers', toJSON: {virtuals: true}, toObject: {virtuals: true}});

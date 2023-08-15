@@ -22,20 +22,20 @@ let update = (req, res, next) => {
     });
 }
 
-let getLink = (req, res, next) => {
-    let data = req.body;
-    data._id = req.params.id;
-    Service.getLink(req.body, (err, result) => {
+let loadById = (req, res, next) => {
+    Service.load({filter: {_id: req.params.id}}, (err, result) => {
         if (err) {
             return next(err);
+        } else if (!result || !result.length) {
+            res.json({'status': 'Error', 'message': 'Invalid Customer'});
         } else {
-            res.json({'status': 'Success', 'message': result});
+            res.json({'status': 'Success', 'message': result[0]});
         }
     });
 }
 
-let loadById = (req, res, next) => {
-    Service.load({filter: {_id: req.params.id}}, (err, result) => {
+let loadByShortPath = (req, res, next) => {
+    Service.load({filter: {short_path: req.params.id}}, (err, result) => {
         if (err) {
             return next(err);
         } else if (!result || !result.length) {
@@ -65,8 +65,8 @@ let load = (req, res, next) => {
 module.exports = {
     add,
     update,
-    getLink,
     loadById,
+    loadByShortPath,
     load,
     loadAll,
 }

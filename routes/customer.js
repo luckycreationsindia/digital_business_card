@@ -5,6 +5,9 @@ const Controller = require('../controllers/customer');
 /* Load by ID. */
 router.get('/:id', Controller.loadById);
 
+/* Load by Short Path. */
+router.get('/short/:id', Controller.loadByShortPath);
+
 /* Load All. */
 router.post('/loadAll', isAdmin, Controller.loadAll);
 
@@ -16,8 +19,5 @@ router.post('/add', isAdmin, Controller.add);
 
 /* Update Customer */
 router.post('/update/:id', isAdmin, Controller.update);
-
-/* Update Customer */
-router.post('/getLink/:id', isAdmin, Controller.getLink);
 
 module.exports = router;
