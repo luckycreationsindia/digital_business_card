@@ -41,7 +41,9 @@ let loadByShortPath = (req, res, next) => {
         } else if (!result || !result.length) {
             res.json({'status': 'Error', 'message': 'Invalid Customer'});
         } else {
-            res.json({'status': 'Success', 'message': result[0]});
+            let id = result[0]._id;
+            let url = (process.env.FRONTEND_URL || "http://localhost:9878/") + "?id=" + id;
+            res.status(301).redirect(url);
         }
     });
 }
