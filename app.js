@@ -4,8 +4,11 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require("cors");
-const passport = require('passport');
+const PassportMain = require('passport').Passport;
+const passport = new PassportMain();
+const passportCustomer = new PassportMain();
 const passportConfig = require('./passport_config');
+const passportCustomerConfig = require('./passport_customer_config');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const fileUpload = require('express-fileupload');
 const s3Manager = require('./services/s3manager');
@@ -51,6 +54,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 passportConfig(passport);
+passportCustomerConfig(passportCustomer);
 let sess = session({
     key: 'dbc-token',
     secret: process.env.AUTH_SECRET,
@@ -67,6 +71,8 @@ let sess = session({
 app.use(sess);
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(passportCustomer.initialize());
+app.use(passportCustomer.session());
 
 global.isAdmin = (req, res, next) => {
     if (req.isAuthenticated && req.user && req.user.role === 1) {
@@ -118,12 +124,13 @@ app.use((err, req, res, next) => {
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
     // render the error page
+    let status;
     if(err.status && err.status < 100) {
-        res.status(200);
+        status = 200;
     } else if(err.status && err.status >= 100) {
-        res.status(parseInt(err.status) || 500);
+        status = parseInt(err.status) || 500;
     } else {
-        res.status(500);
+        status = 500;
     }
 
     let message = err.message || "Unknown Error";
@@ -139,7 +146,8 @@ app.use((err, req, res, next) => {
             }
         }
     }
-    res.json({"status": "Error", "message": message});
+
+    res.status(status).json({"status": "Error", "message": message});
 });
 
 function getExtension(filename) {

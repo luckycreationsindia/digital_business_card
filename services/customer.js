@@ -15,6 +15,7 @@ let add = (data, next) => {
 
 let update = (data, next) => {
     Model.findByIdAndUpdate(data._id, data, {new: true}).then((result) => {
+        delete result.password;
         return next(null, result);
     }).catch(next);
 }
@@ -23,7 +24,7 @@ let loadAll = (data, next) => {
     let filters = data.filter || {};
     let projection = data.projection || {};
     let options = data.options || {};
-    Model.find(filters, projection, options).then((result) => {
+    Model.find(filters, projection, options).select(["-password"]).then((result) => {
         next(null, result);
     }).catch(next);
 }
@@ -44,7 +45,7 @@ let load = (data, next) => {
     let m =  Model.find(filters, projection, options);
     m = m.skip(skip).limit(limit)
 
-    m.lean().then((result) => {
+    m.select(["-password", "-notes"]).lean().then((result) => {
         Model.countDocuments(filters).then((c) => {
             result.totalCount = c;
             next(null, result);
@@ -53,12 +54,8 @@ let load = (data, next) => {
 }
 
 let remove = (id, next) => {
-    Model.findByIdAndDelete(id).then((err, result) => {
-        if (err) {
-            next(err);
-        } else {
-            next(null, true);
-        }
+    Model.findByIdAndDelete(id).then((result) => {
+        next(null, true);
     }).catch(next);
 }
 
