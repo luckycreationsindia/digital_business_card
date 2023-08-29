@@ -9,7 +9,7 @@ module.exports = function (passport) {
     });
 
     passport.deserializeUser(function (id, done) {
-        User.find({_id: id}, {password: 0}).then((rows) => {
+        User.find({_id: id}, {password: 0}).populate('customer_id').then((rows) => {
             try {
                 let user = rows[0];
                 done(null, user);
@@ -31,6 +31,10 @@ module.exports = function (passport) {
             passReqToCallback: true,
         },
         (req, email, password, done) => {
+            let token = req.headers['api-token'];
+            if(!token || token !== process.env.API_TOKEN) {
+                return done(null, false, {status: 'Error', message: 'Invalid Token'});
+            }
 
             if (!req.body.first_name || !req.body.email) {
                 return done(null, false, {status: 'Error', message: 'All Fields are Required.'});

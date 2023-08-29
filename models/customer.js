@@ -9,7 +9,7 @@ const CustomerSchema = new Schema({
     jobTitle: String,
     profile: String,
     mainColor: String,
-    email: String,
+    email: {type: String, required: true, unique: true},
     website: String,
     address: String,
     gst: String,

@@ -18,6 +18,6 @@ router.post('/load', Controller.load);
 router.post('/add', isAdmin, Controller.add);
 
 /* Update Customer */
-router.post('/update/:id', isAdmin, Controller.update);
+router.post('/update/:id', isAuth, Controller.update);
 
 module.exports = router;

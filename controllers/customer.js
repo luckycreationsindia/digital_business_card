@@ -13,6 +13,8 @@ let add = (req, res, next) => {
 let update = (req, res, next) => {
     let data = req.body;
     data._id = req.params.id;
+    data.user = req.user;
+    data.isAdmin = req.user.role === 1;
     Service.update(req.body, (err, result) => {
         if (err) {
             return next(err);
