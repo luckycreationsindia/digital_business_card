@@ -4,11 +4,8 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require("cors");
-const PassportMain = require('passport').Passport;
-const passport = new PassportMain();
-const passportCustomer = new PassportMain();
+const passport = require('passport');
 const passportConfig = require('./passport_config');
-const passportCustomerConfig = require('./passport_customer_config');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const fileUpload = require('express-fileupload');
 const s3Manager = require('./services/s3manager');
@@ -54,7 +51,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 passportConfig(passport);
-passportCustomerConfig(passportCustomer);
 let sess = session({
     key: 'dbc-token',
     secret: process.env.AUTH_SECRET,
@@ -71,8 +67,6 @@ let sess = session({
 app.use(sess);
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(passportCustomer.initialize());
-app.use(passportCustomer.session());
 
 global.isAdmin = (req, res, next) => {
     if (req.isAuthenticated && req.user && req.user.role === 1) {
@@ -82,8 +76,16 @@ global.isAdmin = (req, res, next) => {
     }
 }
 
+global.isAuth = (req, res, next) => {
+    if (req.isAuthenticated && req.user) {
+        next();
+    } else {
+        res.status(403).json({'status': 'error', 'message': 'Unauthorized Access'});
+    }
+}
+
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const usersRouter = require('./routes/user');
 const customersRouter = require('./routes/customer');
 
 app.use('/', indexRouter);
@@ -96,7 +98,7 @@ app.use(fileUpload({
     tempFileDir : '/tmp/'
 }));
 
-app.post('/api/v1/f/upload', isAdmin, (req, res, next) => {
+app.post('/api/v1/f/upload', isAuth, (req, res, next) => {
     if (!req.files || Object.keys(req.files).length === 0) {
         return res.status(400).send('No files were uploaded.');
     }
