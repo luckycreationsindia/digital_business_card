@@ -24,7 +24,7 @@ let loadAll = (data, next) => {
     let filters = data.filter || {};
     let projection = data.projection || {};
     let options = data.options || {};
-    Model.find(filters, projection, options).select(["-password"]).then((result) => {
+    Model.find(filters, projection, options).then((result) => {
         next(null, result);
     }).catch(next);
 }
@@ -45,7 +45,7 @@ let load = (data, next) => {
     let m =  Model.find(filters, projection, options);
     m = m.skip(skip).limit(limit)
 
-    m.select(["-password", "-notes"]).lean().then((result) => {
+    m.select(["-notes"]).lean().then((result) => {
         Model.countDocuments(filters).then((c) => {
             result.totalCount = c;
             next(null, result);
