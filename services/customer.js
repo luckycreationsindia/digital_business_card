@@ -83,7 +83,7 @@ let update = async (data, next) => {
     if(data.hasOwnProperty('status') && data.isAdmin) updateData['status'] = data.status;
 
     Model.findByIdAndUpdate(id, updateData, {new: true}).then((result) => {
-        let userUpdateData = {}
+        let userUpdateData = {'customer_id': id};
         let upsert = false;
         if(data.password && data.first_name && data.email) upsert = true;
         if(data.first_name) userUpdateData['first_name'] = data.first_name;
@@ -96,7 +96,7 @@ let update = async (data, next) => {
         if(data.hasOwnProperty('pincode')) userUpdateData['pincode'] = data.pincode;
         if(data.password) userUpdateData['password'] = bcrypt.hashSync(data.password, 10);
 
-        User.updateOne({'customer_id': result._id}, {'$set': userUpdateData}, {upsert: upsert}).then((userResult) => {
+        User.updateOne({'customer_id': id}, {'$set': userUpdateData}, {upsert: upsert}).then((userResult) => {
             next(null, result);
         }).catch((err) => {
             console.error(err);
