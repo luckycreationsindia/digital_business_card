@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="*Allow customers to update it's data">
+    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="*Intellij Related Updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,6 +84,10 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SwiftWorkspaceSettings">
+    <option name="detectedToolchain" value="true" />
+    <option name="toolchainPathValue" value="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="" />
@@ -110,6 +118,7 @@
       <workItem from="1692973413671" duration="212000" />
       <workItem from="1693319351127" duration="10074000" />
       <workItem from="1693935678525" duration="632000" />
+      <workItem from="1698330756007" duration="898000" />
     </task>
     <task id="LOCAL-00001" summary="*Update packages">
       <option name="closed" value="true" />
@@ -359,7 +368,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693334879292</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="*Add more sectors">
+      <option name="closed" value="true" />
+      <created>1698330894159</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1698330894159</updated>
+    </task>
+    <task id="LOCAL-00033" summary="*Intellij Related Updates">
+      <option name="closed" value="true" />
+      <created>1698330930075</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1698330930075</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +427,9 @@
     <MESSAGE value="*Add msg91 SMS Service" />
     <MESSAGE value="*Add Customer Login Strategy" />
     <MESSAGE value="*Allow customers to update it's data" />
-    <option name="LAST_COMMIT_MESSAGE" value="*Allow customers to update it's data" />
+    <MESSAGE value="*Add more sectors" />
+    <MESSAGE value="*Intellij Related Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="*Intellij Related Updates" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
