@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="*Intellij Related Updates">
+    <list default="true" id="c9d0d6b0-1f66-40ec-a809-1633b33230ef" name="Changes" comment="Update package dependencies and lockfile version&#10;&#10;This update addresses several changes in the package dependencies, including several version updates and the addition of a new dependency. Also, the lockfile version has been updated from 2 to 3.">
+      <change afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodyActiveAccount">
+    <option name="activeAccountId" value="VXNlcjoyMzUxNzI=" />
   </component>
   <component name="ComposerSettings">
     <execution />
@@ -19,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;luckycreationsindia&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/luckycreationsindia/digital_business_card&quot;,
+    &quot;accountId&quot;: &quot;cbb431f2-42ea-4189-ad2a-ebf49d1eea0d&quot;
+  }
+}</component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
   </component>
@@ -28,6 +44,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/msg91/dist/src/index.d.ts" root0="SKIP_INSPECTION" />
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="te5lnbs0" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -35,12 +54,17 @@
         &quot;associatedIndex&quot;: 6
         }</component>
   <component name="ProjectId" id="2TLQl2xsMJVptQBTjS0GSIpK7uv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
@@ -50,8 +74,10 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.3.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.3.1&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.2.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.14.11&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lucky/Projects/NodeJS/digital_business_card/controllers&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -60,7 +86,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\lucky\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -82,6 +108,14 @@
       <envs />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18968.26" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18968.26" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SwiftWorkspaceSettings">
@@ -119,6 +153,13 @@
       <workItem from="1693319351127" duration="10074000" />
       <workItem from="1693935678525" duration="632000" />
       <workItem from="1698330756007" duration="898000" />
+      <workItem from="1721376427267" duration="2000000" />
+      <workItem from="1721549894252" duration="20000" />
+      <workItem from="1721549929674" duration="597000" />
+      <workItem from="1721641959163" duration="507000" />
+      <workItem from="1722611836948" duration="7000" />
+      <workItem from="1722612221354" duration="17000" />
+      <workItem from="1722964663731" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="*Update packages">
       <option name="closed" value="true" />
@@ -384,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698330930075</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Update package dependencies and lockfile version&#10;&#10;This update addresses several changes in the package dependencies, including several version updates and the addition of a new dependency. Also, the lockfile version has been updated from 2 to 3.">
+      <option name="closed" value="true" />
+      <created>1721376967329</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1721376967329</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +453,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="*Update packages" />
     <MESSAGE value="*Cleanup" />
     <MESSAGE value="*Change sameSite none" />
     <MESSAGE value="*Add loadAll customers for admin" />
@@ -429,7 +477,8 @@
     <MESSAGE value="*Allow customers to update it's data" />
     <MESSAGE value="*Add more sectors" />
     <MESSAGE value="*Intellij Related Updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="*Intellij Related Updates" />
+    <MESSAGE value="Update package dependencies and lockfile version&#10;&#10;This update addresses several changes in the package dependencies, including several version updates and the addition of a new dependency. Also, the lockfile version has been updated from 2 to 3." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update package dependencies and lockfile version&#10;&#10;This update addresses several changes in the package dependencies, including several version updates and the addition of a new dependency. Also, the lockfile version has been updated from 2 to 3." />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
